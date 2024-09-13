@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'blog/css/construction-detail.css' %}">
+
+
+<h2 class="page-title">{{ post.title }}</h2>
+{% if post.image %}
+  <img src="{{ post.image.url }}" alt="{{ post.title }}" class="page-thumbnail">
+{% endif %}
+{% autoescape off %}
+<div class="page-body">{{ post.body|linebreaks }}</div>
+
+<div class="page-contents">
+<!--ボタンエリア-->
+<div class="btn-group">
+{% if post.living_B and post.living_A %}
+<div class="renova-btn" data-target="living-wrapper">各種部屋</div>
+{% endif %}
+
+{% if post.kitchen_B and post.kitchen_A %}
+<div class="renova-btn" data-target="kitchen-wrapper">キッチン</div>
+{% endif %}
+
+{% if post.entrance_B and post.entrance_A %}
+<div class="renova-btn" data-target="entrance-wrapper">玄関</div>
+{% endif %}
+
+{% if post.toilet_B and post.toilet_A %}
+<div class="renova-btn" data-target="toilet-wrapper">脱衣所等</div>
+{% endif %}
+
+{% if post.stairs_B and post.stairs_A %}
+<div class="renova-btn" data-target="stairs-wrapper">階段, 廊下</div>
+{% endif %}
+
+{% if post.etc_B and post.etc_A %}
+<div class="renova-btn" data-target="etc-wrapper">その他</div>
+{% endif %}
+</div>
+
+<!--施工事例画像-->
+  <div class="renova-img-wrapper">
+{% if post.living_B and post.living_A %}
+  <div id="living-wrapper" class="tab-content">
+    <div class="img-container">
+    <img src="{{ post.living_B.url }}" alt="リビングbefore" class="renova-img-before">
+    <span class="label before">Before</span>
+    </div>
+
+    <div class="img-container">
+    <img src="{{ post.living_A.url }}" alt="リビングafter" class="renova-img-after">
+    <span class="label after">After</span>
+    </div>
+  </div>
+{% endif %}
+
+{% if post.kitchen_B and post.kitchen_A %}
+  <div id="kitchen-wrapper" class="tab-content">
+    <div class="img-container">
+    <img src="{{ post.kitchen_B.url }}" alt="キッチンbefore" class="renova-img-before">
+    <span class="label before">Before</span>
+    </div>
+
+    <div class="img-container">
+    <img src="{{ post.kitchen_A.url }}" alt="キッチンafter" class="renova-img-after">
+    <span class="label after">After</span>
+  </div>
+</div>
+{% endif %}
+
+{% if post.entrance_B and post.entrance_A %}
+  <div id="entrance-wrapper" class="tab-content">
+    <div class="img-container">
+    <img src="{{ post.entrance_B.url }}" alt="玄関before" class="renova-img-before">
+    <span class="label before">Before</span>
+    </div>
+
+    <div class="img-container">
+    <img src="{{ post.entrance_A.url }}" alt="玄関after" class="renova-img-after">
+    <span class="label after">After</span>
+  </div>
+</div>
+{% endif %}
+
+{% if post.toilet_B and post.toilet_A %}
+<div id="toilet-wrapper" class="tab-content">
+    <div class="img-container">
+    <img src="{{ post.toilet_B.url }}" alt="トイレbefore" class="renova-img-before">
+    <span class="label before">Before</span>
+    </div>
+
+
+    <div class="img-container">
+    <img src="{{ post.toilet_A.url }}" alt="トイレafter" class="renova-img-after">
+    <span class="label after">After</span>
+  </div>
+</div>
+{% endif %}
+
+{% if post.stairs_B and post.stairs_A %}
+<div id="stairs-wrapper" class="tab-content">
+    <div class="img-container">
+    <img src="{{ post.stairs_B.url }}" alt="階段before" class="renova-img-before">
+    <span class="label before">Before</span>
+    </div>
+
+
+    <div class="img-container">
+    <img src="{{ post.stairs_A.url }}" alt="階段after" class="renova-img-after">
+    <span class="label after">After</span>
+  </div>
+</div>
+{% endif %}
+
+{% if post.etc_B and post.etc_A %}
+<div id="etc-wrapper" class="tab-content">
+    <div class="img-container">
+    <img src="{{ post.etc_B.url }}" alt="etc before" class="renova-img-before">
+    <span class="label before">Before</span>
+    </div>
+
+
+    <div class="img-container">
+    <img src="{{ post.etc_A.url }}" alt="etc after" class="renova-img-after">
+    <span class="label after">After</span>
+  </div>
+</div>
+{% endif %}
+  </div>
+</div>
+
+
+{% endautoescape %}
+
+<script>
+  const buttons = document.querySelectorAll('.renova-btn');
+  const contents = document.querySelectorAll('.tab-content');
+  
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = button.dataset.target;
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+  
+      contents.forEach(content => {
+        content.style.display = 'none';
+      });
+  
+      const targetContent = document.getElementById(targetId);
+      targetContent.style.display = 'flex';
+    });
+  });
+  </script>
+
+{% endblock %}

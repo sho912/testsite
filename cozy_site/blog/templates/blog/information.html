@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog/css/information.css' %}">
+<script src="{% static 'blog/js/company-info.js' %}"></script>
+<script src="{% static 'blog/js/info-animation.js' %}"></script>
+
+<div class="info-container">
+    <div class="phrase-back">
+      <img src="{% static 'blog/img/キャッチフレーズ.jpg' %}" alt="キャッチフレーズ背景" class="phrase-back__img">
+      <div class="logo-phrase-wrapper">
+        <img src="{% static 'blog/img/透過ロゴ.png' %}" alt="企業ロゴ" class="company-logo">
+        <div class="phrase-wrapper">
+          <div class="phrase1">ずっと、居心地のいい住まいを</div>
+          <div class="phrase2">コージーデザイン</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section class="company-container">
+  <h2 class="display-4 display-md-2">会社概要</h2>
+    <div class="company-contents">
+      <img src="{% static 'blog/img/透過ロゴ.png' %}" alt="企業ロゴ" class="company-logo2">
+      <div class="company-title">コージーデザイン</div>
+    </div>
+
+  <div class="company-textarea">
+    <div class="box5"><span style="font-size: 20px;">経営理念</span></div>
+    <div class="text-wrapper">
+    <p class="text_1">自己の知識・技術力の向上に努め、協調性を養い、様々な出会いとご縁に感謝し<br>
+  利他、思いやりの心を持って
+  売り手、買い手が満足して取引をし<br>社会的貢献にも重きを置く
+  三方よしの精神を理念としています。</p>
+  </div>
+
+    <div class="box5"><span style="font-size: 20px;">企業理念</span></div>
+
+    <div class="text-wrapper">  
+    <p style="text-align: center;"><span style="font-size: 22px;"><strong><span style="font-family: 'book antiqua', palatino, serif;">「経」　道筋、道理を通すこと</span></strong></span></p>
+    <p style="text-align: center;"><span style="font-size: 22px;"><strong><span style="font-family: 'book antiqua', palatino, serif;">「営」　行動を表すこと</span></strong></span></p>
+<br>
+    <p class="text_1">経営や仕事を通じて、人としての正しい道筋、正しい道理を常に心掛け
+  <br>
+      それを日々の行動に移し、地域社会を創る企業となる。</p>
+    </div>
+    <div class="box5-last"><span style="font-size: 20px;">会社概要</span></div>
+  <br>
+  <br>
+    <table class="table1">
+  <tbody>
+  <tr>
+  <th style="text-align: center; width: 36.6894%;">屋号</th>
+  <td style="text-align: center; width: 97.221%;">コージーデザイン</td>
+  </tr>
+  <tr>
+  <th style="text-align: center; width: 36.6894%;">住所</th>
+  <td style="text-align: center; width: 97.221%;">大分市ふじが丘西3丁目18-16</td>
+  </tr>
+  <tr>
+  <th style="text-align: center; width: 36.6894%;">創業</th>
+  <td style="text-align: center; width: 97.221%;">平成26年5月</td>
+  </tr>
+  <tr>
+  <th style="text-align: center; width: 36.6894%;">設立</th>
+  <td style="text-align: center; width: 97.221%;">令和4年1月</td>
+  </tr>
+  <tr>
+  <th style="text-align: center; width: 36.6894%;">資本金</th>
+  <td style="text-align: center; width: 97.221%;">100 万円</td>
+  </tr>
+  <tr>
+  <th class="tablein" style="text-align: center; width: 36.6894%;">事業内容</th>
+  <td style="text-align: center; width: 97.221%;">
+  新築事業<br>
+  リノベーション事業<br>
+  不動産事業<br>
+  インスペクション</td>
+  </tr>
+  </tbody>
+  </table>
+  <br>
+</section>
+
+{% endblock %}

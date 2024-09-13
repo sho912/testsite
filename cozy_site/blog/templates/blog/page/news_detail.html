@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'blog/css/post_detail.css' %}">
+
+{% if post.image %}
+  <img src="{{ post.image.url }}" alt="{{ post.title }}" class="page-thumbnail">
+{% endif %}
+<div class="page-title">
+<h2 class=>{{ post.title }}</h2>
+</div>
+<p class="page-date">投稿日: {{ post.pub_date|date:"Y年m月d日" }}</p>
+<p>{{ post.intro }}</p>
+{% autoescape off %}
+<div class="page-contents">{{ post.body|linebreaks }}</div>
+{% endautoescape %}
+
+{% endblock %}

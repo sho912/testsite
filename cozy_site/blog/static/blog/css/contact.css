@@ -1,0 +1,113 @@
+.contact-header {
+    width: 80%;
+    height: 250px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.contact-txt-wrapper {
+    display: block;
+    text-align: center;
+}
+
+.contact-text {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 24px;
+    font-family: serif;
+}
+
+#id_subject {
+  margin: 0 0 20px 0;
+  padding: 5px;
+  width: 50%;
+}
+
+.form-control {
+  width: 50%;
+}
+
+.form-sub {
+  width: 50%;
+  height: auto;
+  margin: 0 0 20px 0;
+} 
+
+#id_tel, #id_name, #id_post {
+  width: 30%;
+}
+
+/* 1200px以上の大型デスクトップ向けスタイル */
+@media (min-width: 1200px) {
+    /* 1200px以上の大型デスクトップ用スタイル */
+  }
+  
+  /* 768px以下のタブレット/スマホ向けスタイル */
+  @media (max-width: 767px) {
+    #id_subject {
+      width: 80%;
+  }
+
+  .form-sub {
+    width: 80%;
+  }
+
+  .form-control {
+    width: 80%;
+  }
+
+  }
+  
+  /* 480px以下の小型スマホ向けスタイル */
+  @media (max-width: 479px) {
+
+    .text-secondary {
+      text-align: center;
+    }
+
+    .contact-header {
+      width: 100%;
+      object-fit: contain;
+      margin: 0;
+    }
+
+    .contact-text {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .contact-txt-wrapper {
+      text-align: justify;
+
+    }
+
+    #id_subject {
+      width: 100%;
+    }
+
+    #id_tel, #id_name, #id_post {
+      width: 100%;
+    }
+
+    .form-sub {
+      width: 100%;
+    }
+
+    .form-control {
+      width: 100%;
+    }
+
+    [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+      cursor: pointer;
+      display: block;
+      margin: auto;
+  } 
+
+  }
+  
+  /* 480px以下の小型スマホ向けスタイル */
+  @media (max-width: 340px) {
+    /* 480px以下の小型スマホ用スタイル */
+  }

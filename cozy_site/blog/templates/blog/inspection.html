@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="inspection-body">
+<link rel="stylesheet" href="{% static 'blog/css/inspection.css' %}">
+<img src="{% static 'blog/img/inspection-header.png' %}" class="is-header" alt="インスペクションヘッダー">
+<h2 class="inspection-title">ホームインスペクション(住宅診断)とは？</h2>
+<p class="inspection-text">住宅の健康診断をしたことがありますか？
+ホームインスペクションとは、住宅診断士が専門家の視点から、住宅の劣化状況、
+新築やリフォーム時の施工欠陥の有無、改修すべき箇所をアドバイスする専門業務です。
+まだ日本ではあまり馴染みのない言葉ですが、米国では約80％の割合でインスペクションが行われており、
+日本でも2018年から不動産売買契約時にインスペクションの有無が義務付けられています。</p>
+<h2 class="inspection-title">住宅診断ではどんなことをするの？</h2>
+<p class="inspection-text">・非破壊検査<br>
+目視調査の一次診断後、必要に応じて「ちゃんと鉄筋が入っているか」「耐久性はどうか」「基礎のひび割れの調査」等、
+複数の項目を二次診断で専門知識を持った診断士がチェックします。
+</p>
+
+<h2 class="inspection-title">住宅診断で得られるメリットは？</h2>
+<p class="inspection-text">「家があと何年持つか」、「リフォームをするとしたらどこをいつまでにすればいいのか」、「そのときに掛かる費用の目安」など、
+    家のメンテナンスや耐久性、リフォームや新築を建てた際の施工不良のチェック、また不動産売買の際にその価格で本当に信頼出来るか等の指標となります。<br>
+    建物の劣化や施工不良は目に見えないところにもたくさん潜んでいます。その住宅の性能を客観的に評価出来るプロがホームインスペクター(住宅診断士)です。
+</p>
+
+<h2 class="inspection-title">診断費用はどれぐらい掛かるの？</h2>
+<p class="inspection-text">一般的な大きさの中古一戸建て(例：120㎡の二階建)、100㎡以下のマンション、アパートの一室でおよその価格が決まっています。<br>
+コージーデザインでは住宅診断と併せて、これからの時代に合わせた「耐震性能」の診断もすることも強くおすすめ致します。耐震性能は住宅診断の価格には含まれませんが、
+同時に行うことも出来ます、</p>
+<img src="{% static 'blog/img/inspection-price.png' %}" class="is-price" alt="インスペクション費用">
+
+
+<div class="last-text-wrapper">
+<p class="inspection-text-last">専門知識を有している、経験豊富なスタッフが大切なお家を診断致します<br><br>
+    お体の定期健診やお車の車検があるように、ご自宅の診断もしてみませんか？
+    <br><br>お問い合わせを心よりお待ちしております。
+<br>
+<br><br>
+<div class="logo-wrapper">
+<img src="{% static 'blog/img/透過ロゴ.png' %}" alt="企業ロゴ" class="company-logo">
+<span class="last-company-title">コージーデザイン</span>
+</div>
+<br>
+<br>
+<div class="contact-wraper">
+<a href="https://cozydesign.jp/%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B/"><img src="{% static 'blog/img/inspection-contact.png' %}" class="is-contact" alt="インスペクションお問い合わせ">
+</div>
+</p>
+</div>
+</div>
+{% endblock %}

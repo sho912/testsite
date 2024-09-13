@@ -1,0 +1,67 @@
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.thumbnail {
+  flex: 0 0 calc(33.33% - 20px);
+  height: auto;
+  background-color: #f1f1f1;
+}
+
+.thumbnail a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.thumbnail img.construction-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.thumbnail h2 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.thumbnail p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+
+/* 1200px以上の大型デスクトップ向けスタイル */
+@media (min-width: 1200px) {
+    /* 1200px以上の大型デスクトップ用スタイル */
+  }
+  
+  /* 768px以下のタブレット/スマホ向けスタイル */
+  @media (max-width: 767px) {
+    /* 768px以下のタブレット/スマホ用スタイル */
+  }
+  
+  /* 480px以下の小型スマホ向けスタイル */
+  @media (max-width: 479px) {
+    .thumbnail h2 {
+      margin-top: 10px;
+      font-size: 1rem;
+  }
+
+  .thumbnail {
+    flex: 0 0 calc(50% - 20px);
+  }
+  
+  }
+  
+  /* 480px以下の小型スマホ向けスタイル */
+  @media (max-width: 340px) {
+    /* 480px以下の小型スマホ用スタイル */
+  }

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog/css/stock.css' %}">
+
+<img src="{% static 'blog/img/stock-header.png' %}" class="stock-img"  alt="住宅ストックの説明">
+<img src="{% static 'blog/img/stock-mobile.jpg' %}" class="stock-mobile-img" alt="住宅ストックスマホ画像">
+<h2 class="stock-title">ストック住宅ってどういうもの？</h2>
+<p class="stock-text">ストック住宅(住宅ストック、ストック活用型住宅)とは、既に建てられ売りに出されている住宅、つまり中古物件のことを指します。
+    戦後、日本では新築住宅を重視した供給がなされてきましたが、それが飽和しきった後でも新築住宅の数は総世帯数を超えて
+    供給され続けた結果、現在では「空き家問題」が社会的な規模になっています。<br>
+    <a href="{% static 'blog/img/日本の空き家状況.png' %}" target="_blank">
+        <img src="{% static 'blog/img/日本の空き家状況.png' %}" class="stock-img1" alt="空き家状況の説明">
+    </a><br>
+    <span class="min-description">引用元：国土交通省 「我が国の住宅ストックをめぐる状況について」</span><br>
+    こうした問題を解消するための施策として、新築を更に建てるのではなく住宅を「ストック」つまり中古物件を長く活用していき、
+    将来の世代に継承出来るような高品質な家にしていこうという取り組みが住宅ストックです。
+    また耐震補強、耐火リフォームなども政府主導で推進されています。</p>
+
+    <h2 class="stock-title">リフォームの際に国から受けられる補助金</h2>
+    <p class="stock-text">上記の通り、現在政府がストック型社会を推進しているため、リフォームをした場合の受けられる補助金をご紹介いたします。
+        
+    </p>
+
+<h2 class="stock-title">弊社の取り組み</h2>
+<p class="stock-text">コージーデザインでは従来の新築を「建てては壊し」から中古物件でも新築でも「きちんと手入れをし、長く使っていける」
+    高品質で、社会、世界にとってもエコな次世代に継承していける新築住宅、リフォームを目標に掲げています。
+</p>
+
+
+{% endblock %}

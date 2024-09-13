@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'blog/css/contact.css' %}">
+<img src="{% static 'blog/img/contact-header.png' %}" class="contact-header" alt="コンタクトフォームヘッダー">
+
+<div class="contact-txt-wrapper">
+  <p class="contact-text">
+      この度はコージーデザインにお問い合わせくださり、誠にありがとうございます。
+  </p>
+  <p class="contact-text">
+      お問い合わせ内容を確認後、担当者から折り返しご連絡致します。
+  </p>
+  <p class="contact-text">
+      内容によって返信が多少遅れることがあります。あらかじめご了承下さい。
+  </p>
+  </div>
+
+  <div class="container">
+    <h2 class="text-secondary my-5">お問い合わせフォーム</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.non_field.errors }}
+
+        {% for field in form %}
+        <div class="form-group">
+          {{ field.label_tag }}
+          {{ field }}
+        </div>
+      {% endfor %}
+
+        <button class="btn btn-danger mt-3 px-4">送信</button>
+    </form>
+  </div>
+
+{% endblock %}

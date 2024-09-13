@@ -1,0 +1,56 @@
+.page-thumbnail {
+    width: 80%;
+    object-fit: contain;
+    height: 400px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page-title h2 {
+    position: relative;
+    padding: 0.25em 0;
+    width: 60%;
+    display: block;
+    margin: auto;
+    text-align: center; 
+    font-family: monospace;
+}
+
+.page-title h2:after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+    background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+
+.page-date {
+    text-align: center;
+    font-size: 12px;
+}
+
+.page-contents {
+    font-size: 20px;
+}
+
+
+/* 1200px以上の大型デスクトップ向けスタイル */
+@media (min-width: 1200px) {
+    /* 1200px以上の大型デスクトップ用スタイル */
+  }
+  
+  /* 768px以下のタブレット/スマホ向けスタイル */
+  @media (max-width: 767px) {
+    /* 768px以下のタブレット/スマホ用スタイル */
+  }
+  
+  /* 480px以下の小型スマホ向けスタイル */
+  @media (max-width: 479px) {
+  }
+  
+  /* 480px以下の小型スマホ向けスタイル */
+  @media (max-width: 340px) {
+    /* 480px以下の小型スマホ用スタイル */
+  }

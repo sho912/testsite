@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="news-list">
+  {% if subsidy_posts %}
+    {% for subsidy in subsidy_posts %}
+      <a href="{% url 'subsidy_detail' subsidy.slug %}" class="subsidy-item">
+        <h2>{{ subsidy.title }}</h2>
+        <p>{{ subsidy.content }}</p>
+      </a>
+    {% endfor %}
+  {% else %}
+    <p>お知らせの記事はありません</p>
+  {% endif %}
+</div>
+
+{% endblock %}

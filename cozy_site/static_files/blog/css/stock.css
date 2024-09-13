@@ -1,0 +1,109 @@
+.stock-img {
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.stock-title {
+    display: flex;
+    align-items: center;/* 縦位置の調整 */
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 80px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.stock-title::before,
+.stock-title::after {
+    content: '';
+    flex-grow: 1;
+    height: 2.4px;
+    background: lightseagreen;
+    max-width: 200px;
+}
+
+.stock-title::before {
+    margin-right: 30px;
+}
+
+.stock-title::after {
+    margin-left: 30px;
+}
+
+.stock-text {
+    width: 75%;
+    font-size: 24px;
+    display: block;
+    margin: auto;
+    margin-bottom: 80px;
+    font-family: serif;
+}
+
+.stock-img1 {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.min-description{
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* 1200px以上の大型デスクトップ向けスタイル */
+@media (min-width: 1200px) {
+    .stock-mobile-img {
+        display: none;
+    }
+  }
+  
+  /* 768px以下のタブレット/スマホ向けスタイル */
+  @media (max-width: 767px) {
+    .stock-img {
+        display: none;
+    }
+  }
+  
+  /* 480px以下の小型スマホ向けスタイル */
+  @media (max-width: 479px) {
+    .stock-mobile-img {
+        width: 100%;
+        height: 150px;
+    }
+
+    .stock-title {
+        color: #364e96;/*文字色*/
+        border: solid 3px #364e96;/*線色*/
+        padding: 0.5em;/*文字周りの余白*/
+        border-radius: 0.5em;/*角丸*/
+        font-size: 20px;
+    }
+
+    .stock-title::before, .stock-title::after {
+        content: none;
+        flex-grow: 0;
+        height: 0;
+        background: none;
+        max-width: none;
+    }
+
+    .stock-text {
+        width: 95%;
+    }
+  }
+  
+  /* 480px以下の小型スマホ向けスタイル */
+  @media (max-width: 340px) {
+
+    .stock-title {
+        font-size: 20px;
+    }   
+  }

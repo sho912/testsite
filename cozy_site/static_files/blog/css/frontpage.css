@@ -1,0 +1,573 @@
+/* 中部コンテンツ */
+.back_img {
+    width: 100%;
+    height: auto;
+}
+
+.row {
+    text-align: center;
+    --bs-gutter-x: 0;
+    margin-top: 30px;
+}
+
+.sw-contents {
+    width: 85%;
+    margin: auto;
+}
+
+.renovate-wrapper {
+    display: flex;
+    align-items: flex-start;
+    background-color: #F9F7F1;
+    min-height: 450px;
+}
+
+.renovate-wrapper .sw-img {
+    flex: 0 0 50%;
+    height: 450px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.renovate-wrapper .right {
+    flex: 0 0 50%;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1.5s;
+    text-align: center;
+}
+
+.renovate-wrapper .right.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.renovate-wrapper .sw-title {
+    margin: 40px 0 10px 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.renovate-wrapper .sw-text {
+    margin: 20px 0 0;
+    padding: 0 30px;
+    font-size: 22px;
+    font-family: serif;
+    text-align: left;
+}
+
+.btn--orange,
+a.btn--orange {
+    color: #fff;
+    background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+    color: #fff;
+    background: #f56500;
+}
+
+a.btn--radius {
+    border-radius: 100vh;
+    font-weight: bold;
+    margin-top: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+/* ストック住宅 */
+.stock-wrapper {
+    display: flex;
+    align-items: flex-start;
+    background-color: #F9F7F1;
+    min-height: 450px;
+}
+
+.stock-wrapper .stock-img{
+    flex: 0 0 50%;
+    height: 450px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.stock-wrapper .right {
+    flex: 0 0 50%;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1.5s;
+    text-align: center;
+}
+
+.stock-wrapper .right.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stock-wrapper .stock-title {
+    margin: 40px 0 10px 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.stock-wrapper .stock-text {
+    margin: 20px 0 0;
+    padding: 0 30px;
+    font-size: 22px;
+    font-family: serif;
+    text-align: left;
+}
+
+/* inspection */
+.inspection-wrapper {
+    display: flex;
+    align-items: flex-start;
+    background-color: #F9F7F1;
+    min-height: 450px;
+}
+
+.inspection-wrapper .inspection-img{
+    flex: 0 0 50%;
+    height: 450px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    border: solid 0.1px;
+    border-radius: 50px;
+}
+
+.inspection-wrapper .right {
+    flex: 0 0 50%;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1.5s;
+    text-align: center;
+}
+
+.inspection-wrapper .right.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.inspection-wrapper .inspection-title {
+    margin: 40px 0 10px 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.inspection-wrapper .inspection-text {
+    margin: 20px 0 0;
+    padding: 0 30px;
+    font-size: 22px;
+    font-family: serif;
+    text-align: left;
+}
+
+/* links card */
+.linkcards {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.card-body {
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.1rem;
+}
+
+.card-text {
+    text-align: center;
+    color: white;
+}
+
+.linkcard {
+    border: 0.1px solid;
+    color: grey;
+    position: relative;
+}
+
+
+/* cat-tab */
+.category-content > div {
+    display: none;
+}
+
+.category-content > div.active {
+    display: block;
+}
+
+.category-btn {
+    display: inline-block;
+    padding: 15px 100px;
+    border: 2px solid #002377;
+    color: #007bff;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 0.4em;
+    font-size: 20px;
+    flex-grow: 0.3;
+}
+
+.category-btn.active {
+    color: #ffffff;
+    background-color: #002377;
+}
+
+.cat-link {
+    display: block;
+    text-decoration: none;
+    color: #545454;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px dotted #333;
+    position: relative;
+}
+
+.cat-link:hover {
+    background-color: #f5f5f5;
+}
+
+.cat-date {
+    font-size: 10px;
+    transform: translate(2px, 2px);
+}
+
+.cat-title {
+    font-size: 19px;
+    font-family: 'Shippori Mincho B1';
+    margin-top: 5px;
+}
+
+.cat-title::after {
+    content: "";
+    border-top: 1px solid #222222;
+    border-right: 1px solid #222222;
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 46%;
+    right: 30px;
+}
+
+.card-container{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.cat-text {
+    font-size: 14px;
+    display: block;
+    text-align: right;
+    padding-top: 20px;
+    text-decoration: none;
+    color: #4d4d4d;
+}
+
+.tab-buttons {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.linkcards {
+    display: flex;
+}
+
+
+.swiper-wrapper {
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Shippori Mincho B1';
+    text-align: center;
+    margin-top: 10px;
+}
+
+.construction-link, a {
+    color: #545454;
+    text-decoration: none;
+}
+
+.construction-thumbnail {
+    height: 300px;
+}
+
+.construction-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Shippori Mincho B1';
+}
+
+.swiper-container {
+    position: relative;
+}
+
+.swiper-pagination {
+    bottom: -30px !important;
+}
+
+
+.header {
+    position: relative;
+    width: 100%;
+}
+
+.header_img {
+    width: 100%; /* もしくは適切な幅を指定 */
+    height: 85vh; /* もしくは適切な高さを指定 */
+    background-image: url("{% static 'blog/img/header_video.mp4' %}");
+    background-size: cover;
+    background-position: center;
+}
+
+.header_text {
+    position: absolute;
+    top: 15vh; /* 適切な上辺の位置を指定 */
+    text-align: left; /* テキストを左揃えにする場合 */
+    color: white; /* テキストの色を指定 */
+}
+
+
+  .fade-image {
+    width: 100%;
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+/* 1200px以上の大型デスクトップ向けスタイル */
+@media (min-width: 1200px) {
+    /* 1200px以上の大型デスクトップ用スタイル */
+  }
+
+
+/* タブレット向けスタイル */
+  @media (max-width: 1199px) and (min-width: 819px) {
+    .renovate-wrapper .sw-text, .stock-wrapper .stock-text {
+        font-size: 20px;
+    }
+
+    .inspection-wrapper .inspection-text {
+        font-size: 18px;
+    }
+
+}
+  
+  /* 768px以下のタブレット/スマホ向けスタイル */
+  @media (max-width: 820px) {
+
+    .linkcards {
+        display: block;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    .linkcard {
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .card-container {
+        width: 80%;
+    }
+
+    .category-btn {
+        padding: 10px 50px;
+    }
+
+
+    .col-sm-6 {
+        margin: auto;
+    }
+
+
+    .sw-contents {
+        width: 100%;
+    }
+
+    .stock-wrapper, .renovate-wrapper {
+        display: flex;
+        align-items: normal;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+
+    .inspection-wrapper {
+        display: flex;
+        align-items: normal;
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+    }
+
+    .renovate-wrapper .sw-title, .inspection-wrapper .inspection-title, .stock-wrapper .stock-title {
+        font-size: 22px;
+    }
+
+    .renovate-wrapper .sw-text, .inspection-wrapper .inspection-text, .stock-wrapper .stock-text {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+
+    .header_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+
+  }
+  
+  /* 480px以下の小型スマホ向けスタイル */
+  @media (max-width: 479px) {
+    .card-container {
+        width: 100%;
+    }
+
+    .category-btn {
+        padding: 15px 30px;
+    }
+
+    .linkcards {
+        display: block;
+        margin: auto;
+        margin-top: 50px;
+    }
+    
+    .linkcard {
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .sw-contents {
+        width: 100%;
+    }
+
+    .stock-wrapper, .renovate-wrapper {
+        display: flex;
+        align-items: normal;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+
+    .inspection-wrapper {
+        display: flex;
+        align-items: normal;
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+    }
+
+    .renovate-wrapper .sw-title, .inspection-wrapper .inspection-title, .stock-wrapper .stock-title {
+        font-size: 22px;
+    }
+
+    .renovate-wrapper .sw-text, .inspection-wrapper .inspection-text, .stock-wrapper .stock-text {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+
+    .nav.justify-content-center.py-5 .nav-item .nav-link{
+        font-size: 0.85em;
+    }
+
+    .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .construction-title {
+        font-size: 16px;
+    }
+
+    .construction-thumbnail {
+        height: 200px;
+        width: 300px;
+    }
+
+
+  }
+  
+  /* 340px以下の小型スマホ向けスタイル */
+  @media (max-width: 340px) {
+    .card-container {
+        width: 100%;
+    }
+
+    .category-btn {
+        padding: 15px 20px;
+    }
+
+    .linkcards {
+        display: block;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    .linkcard {
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .sw-contents {
+        width: 100%;
+    }
+
+    .stock-wrapper, .renovate-wrapper {
+        display: flex;
+        align-items: normal;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+
+    .inspection-wrapper {
+        display: flex;
+        align-items: normal;
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+    }
+
+    .renovate-wrapper .sw-title, .inspection-wrapper .inspection-title, .stock-wrapper .stock-title {
+        font-size: 22px;
+    }
+
+    .renovate-wrapper .sw-text, .inspection-wrapper .inspection-text, .stock-wrapper .stock-text {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+
+    .construction-title {
+        font-size: 14px;
+    }
+
+    .construction-thumbnail {
+        height: 200px;
+        width: 250px;
+    }
+
+  }

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="text-secondary my-5">お問い合わせ完了</h2>
+    <p class="mail-result">メールが送信されました。<br>担当から折り返し返信致します。<br>今しばらくお待ち下さい。</p>
+    <a href="{% url 'frontpage' %}" class="btn btn-outline-danger mt-5">ホームに戻る</a>
+</div>
+{% endblock %}

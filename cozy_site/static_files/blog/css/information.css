@@ -1,0 +1,383 @@
+/* company info */
+.phrase-back__img {
+  width: 100%;
+  position: relative;
+}
+
+.company-logo {
+  position: absolute;
+  top: 56vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 50px;
+}
+
+.phrase-wrapper {
+  position: absolute;
+  top: calc(45vh + 20vh + 40px); /* ロゴの下+余白 */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.phrase1 {
+  color: #197148;
+  font-size: 32px;
+  font-family: "Kosugi Maru", sans-serif;
+  font-weight: bold;
+}
+
+.phrase2 {
+  font-size: 30px;
+  color: #197148;
+  font-family: "Kosugi Maru", sans-serif;
+  font-weight: bold;
+}
+
+/* infoアニメーション */
+.info-container,
+.phrase-back__img, 
+.company-logo, 
+.phrase-wrapper,
+.logo-phrase-wrapper,
+.display-4, 
+.company-logo2, 
+.company-container, 
+.company-contents, 
+.company-textarea {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.company-container {
+  display: none;
+  opacity: 0;
+  animation: fadeIn 1s ease 0s forwards;
+}
+
+.info-container {
+  animation: fadeIn 1s ease forwards, fadeOut 1s ease 3s forwards;
+}
+
+.phrase-back__img, 
+.company-logo, 
+.phrase-wrapper {
+  animation: fadeIn 1s ease 0.5s forwards;
+}
+
+.logo-phrase-wrapper {
+  animation: fadeIn 1s ease 1s forwards, fadeOut 1s ease 3s forwards;
+}
+
+.display-4, 
+.company-logo2, 
+.company-container, 
+.company-contents, 
+.company-textarea {
+  animation: fadeIn 1s ease 0.1s forwards;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeOut {
+  from { 
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.display-4 {
+  display: block;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.company-logo2{
+  height: 70px;
+  width: 120px;
+  display: block;
+  margin-right: 10px;
+}
+
+.company-container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.company-contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.company-title{
+  font-size: 1.5em;
+  font-family: serif;
+}
+
+/* テーブルエリア */
+.table1 {
+  width: 60%;
+  border-collapse: collapse;
+  margin: auto;	
+}
+
+.tablein{
+	vertical-align: middle;
+}
+
+.table1 th,td {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+}
+
+.table1 th {
+  background: #f4f4f4;
+  width: 15%;
+  text-align: left;
+}
+
+.box5 {
+  padding: 0.5em 3em;
+  margin: auto;
+  border: double 5px #4ec4d3;
+  width: 50%;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.box5-last {
+  padding: 0.5em 3em;
+  border: double 5px #4ec4d3;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.box5 p {
+  margin: 0; 
+  padding: 0;
+}
+
+.text_1{
+  font-size: 20px;
+	text-align: center;
+  line-height: 2;
+}
+
+.company-textarea{
+  margin-top: 50px;
+}
+
+.text-wrapper {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+
+/* 1200px以上の大型デスクトップ向けスタイル */
+@media (min-width: 1200px) {
+  /* 1200px以上の大型デスクトップ用スタイル */
+}
+
+/* 1020px以下のタブレット/スマホ向けスタイル */
+@media (max-width: 1020px) {
+  .company-logo {
+    top: 40vh;
+}
+
+.phrase-wrapper {
+  top: 55vh;
+}
+
+}
+
+@media (max-width: 820px) {
+  .company-logo {
+    top: 30vh;
+}
+
+.phrase-wrapper {
+  top: 45vh;
+}
+
+.phrase1 {
+  font-size: 24px;
+}
+
+.phrase2 {
+  font-size: 22px;
+}
+
+}
+
+/* 768px以下のタブレット/スマホ向けスタイル */
+@media (max-width: 768px) {
+  .company-logo {
+    top: 28vh;
+    width: 25vw;
+}
+
+.phrase-wrapper {
+  top: 38vh;
+}
+
+}
+
+/* 600px以下向けスタイル */
+@media (max-width: 600px) {
+
+.phrase-wrapper {
+  top: 33vh;
+}
+
+.company-logo {
+  top: 23vh;
+  width: 25vw;
+}
+
+.phrase1 {
+  font-size: 18px;
+}
+
+.phrase2 {
+  font-size: 16px;
+}
+
+}
+
+/* 480px以下の小型スマホ向けスタイル */
+@media (max-width: 479px) {
+  .company-textarea{
+    width: 90%;
+    margin: 50px;
+}
+  .box5 {
+    width: 60%;
+    margin-top: 0;
+  }
+
+  .table1 {
+    width: 95%;
+  }
+
+  .box5-last {
+    width: 60%;
+    margin-top: 0;
+  }
+
+  .text-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .phrase-wrapper {
+    top: 25vh;
+  }
+  
+  .company-logo {
+    top: 15vh;
+    width: 25vw;
+  }
+
+  .phrase1 {
+    font-size: 16px;
+  }
+  
+  .phrase2 {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 420px){
+
+  .phrase-wrapper {
+    top: 24vh;
+  }
+  
+  .company-logo {
+    top: 15vh;
+    width: 25vw;
+  }
+
+}
+
+@media (max-width: 380px){
+
+  .phrase-wrapper {
+    top: 20vh;
+  }
+  
+  .company-logo {
+    top: 12vh;
+    width: 25vw;
+  }
+
+}
+
+/* 340px以下の小型スマホ向けスタイル */
+@media (max-width: 340px) {
+  .box5, .box5-last {
+    width: 90%;
+  }
+
+  .company-logo2 {
+    height: 50px;
+    width: 100px;
+    margin-right: 0;
+  }
+
+  .company-title {
+    font-size: 1.4em;
+  }
+
+  .display-4 {
+    font-size: 24px;
+    }
+
+    .phrase1 {
+      font-size: 16px;
+    }
+    
+    .phrase2 {
+      font-size: 14px;
+    }
+
+    .phrase-wrapper {
+      top: 18vh;
+    }
+    
+    .company-logo {
+      top: 10vh;
+      width: 25vw;
+    }
+}

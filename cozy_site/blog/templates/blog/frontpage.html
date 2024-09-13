@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js'></script>
+<link rel="stylesheet" href="{% static 'blog/css/frontpage.css' %}">
+<script src="{% static 'blog/js/sec_title.js' %}"></script>
+<script src="{% static 'blog/js/sw-text.js' %}"></script>
+<script src="{% static 'blog/js/urlclickevent.js' %}"></script>
+<script src="{% static 'blog/js/category-button.js' %}"></script>
+<script src="{% static 'blog/js/swiper.js' %}"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+
+{% comment %}
+<div class="header">
+    <video autoplay loop muted playsinline class="header_img">
+        <source src="{% static 'blog/img/header_video.mp4' %}" type="video/mp4">
+    </video>
+    <div class="header_text">
+        <h2 class="header_slogan">コージーデザインの技術が<br>あなたの家をリノベートする</h2>
+    </div>
+</div>
+{% endcomment %}
+
+
+<div class="header">
+  <div class="image-container">
+    <img src="{% static 'blog/img/frontheader1.jpg' %}" class="fade-image">
+  </div>
+  <div class="header_text">
+    <h2 class="header_slogan"></h2>
+  </div>
+</div>
+
+ <div class="cozy-link">
+  <a href="https://cozydesign.jp">
+    <img src="{% static 'blog/img/cozy-link.jpg' %}" class="cozy-link-img">
+  </a>
+ </div>
+
+
+<div class="main_contents">
+
+{% comment %}
+<施工事例、あとでswiperのデザイン変更
+なぜかswiperのscriptを呼び出すと反応せず、htmlに直接書くと動作する。>
+{% endcomment %}
+
+{% comment %}
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var swiper = new Swiper('.swiper', {
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 10,
+      centeredSlides: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>
+これを施工事例が増えてきたら差し替え
+{% endcomment %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var mySwiper = new Swiper('.swiper', {
+      loop: true,
+      centeredSlides: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        // 480px以下
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+        // 481px以上
+        481: {
+          slidesPerView: 3,
+          spaceBetween: 10
+        }
+      }
+    });
+  });
+  </script>
+  
+
+
+<section>
+  <div class="sec_title_wrapper">
+  <h2 class="sec_title">施工事例</h2>
+  </div>
+</section>
+
+ <div class="swiper-container">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+        {% for construction in construction_list %}
+        <div class="swiper-slide">
+        <a href="{% url 'construction_detail' construction.slug %}">
+            {% if construction.image %}
+            <img src="{{ construction.image.url }}" class="construction-thumbnail">
+            {% endif %}
+            <h3 class="construction-title">{{ construction.title }}</h3>
+          </a></div>
+        {% endfor %}
+      </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+  <div class="swiper-pagination"></div>
+ </div>
+
+    <section>
+        <div class="sec_title_wrapper">
+        <h2 class="sec_title">当社の施工の特長</h2>
+        </div>
+    </section>
+
+
+<div class="sw-contents">
+  <div class="renovate-wrapper">
+    <img src="{% static 'blog/img/sw-renovate.jpg' %}" class="sw-img" alt="SWリフォーム工法の説明">
+    <div class="right">
+    <p class="sw-title">SW工法を使用したリフォーム</p>
+    <p class="sw-text">スーパーウォール工法リフォームは、
+        SWリフォームパネル+現場施工断熱システム+高断熱サッシ・ドア+計画換気に加え、
+        専門家による既存の建物診断、断熱リフォーム後の気密測定の実施、性能報告書の発行などにより、
+        新築の高性能住宅レベルの断熱リフォームを実現しました。</p>
+        <a href="https://www.lixil.co.jp/lineup/construction_method/mdr-swr/product/sw-renovation/" class="btn btn--orange btn--radius link_confirm">詳細を確認する</a>
+    </div>
+  </div>
+
+  <div class="inspection-wrapper">
+    <div class="right">
+      <p class="inspection-title">お家の健康診断をしてますか？</p>
+      <p class="inspection-text">ホームインスペクション(住宅診断)は米国では不動産取引の際におよそ80%の割合で行われており、
+        日本でも、2018年から不動産売買契約時にインスペクションの有無が義務付けられています。<br>
+        また、リフォームが必要な場所の時期と費用を把握することができ
+        、将来の資金計画が建てやすくなる上、お家を長持ちさせることが出来ます。
+      </p>
+      <a href="{% url 'inspection' %}" class="btn btn--orange btn--radius">詳細を確認する</a>
+    </div>
+    <img src="{% static 'blog/img/inspection.png' %}" class="inspection-img" alt="住宅診断についての説明">
+  </div>
+
+  <div class="stock-wrapper">
+    <img src="{% static 'blog/img/住宅ストック.png' %}" class="stock-img" alt="住宅ストックについての説明">
+    <div class="right">
+      <p class="stock-title">ストック型住宅とは？</p>
+      <p class="stock-text">諸外国に比べ、日本の住宅は短命で新築を重視しており、中古物件の空き家問題が発生しています。
+        ひと昔前では無理だったことも、最新の技術を使えば家を建て直さなくとも
+        家族が継げるぐらい持続可能で性能が長持ちしていく、高性能な家の実現が可能です。
+      </p>
+      <a href="{% url 'stock' %}" class="btn btn--orange btn--radius">詳細を確認する</a>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="tab-buttons">
+      <button class="category-btn active" data-category="news">お知らせ</button>
+      <button class="category-btn" data-category="subsidy">補助金</button>
+    </div>
+  
+    <div class="category-content">
+      <div class="news-wrapper active" id="news">
+        {% if news_posts %}
+          {% for news in news_posts %}
+            <a href="{% url 'news_detail' news.slug %}" class="cat-link">
+              <p class="cat-date">{{ news.pub_date|date:"Y.m.d" }}</p>
+              <h3 class="cat-title">{{ news.title }}</h3>
+            </a>
+          {% endfor %}
+        {% else %}
+          <p>お知らせの記事はありません</p>
+        {% endif %}
+        <a href="{% url 'news_list' %}" class="cat-text">お知らせ一覧を見る</a>
+      </div>
+      
+      <div class="subsidy-wrapper" id="subsidy">
+        {% if subsidy_list %}
+          {% for subsidy in subsidy_list %}
+          <a href="{% url 'subsidy_detail' subsidy.slug %}" class="cat-link">
+          <p class="cat-date">{{ subsidy.pub_date|date:"Y.m.d"  }}</p>
+            <h3 class="cat-title">{{ subsidy.title }}</h3>
+          </a>
+          {% endfor %}
+        {% else %}
+          <p>補助金の記事はありません</p>
+        {% endif %}
+        <a href="{% url 'subsidy_list' %}" class="cat-text">補助金の記事一覧を見る</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="linkcards">
+    <div class="col-sm-6 col-md-4">
+      <div class="linkcard" style="width: 18rem;">
+      <a href="https://lixil.co.jp" class="link_confirm">
+      <img src="{% static 'blog/img/lixil.png' %}" alt="LIXIL" class="bd-placeholder-img card-img-top" width="100%" height="180" 
+      xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"focusable="false" role="img" aria-label="Placeholder: Image cap">
+      <rect width="100%" height="100%" fill="#868e96"/></svg>
+      <div class="card-body">
+      <p class="card-text">LIXIL</p>
+      </div></a>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+      <div class="linkcard" style="width: 18rem;">
+      <a href="https://www.lixil.co.jp/lineup/construction_method/mdr-swr/product/sw-renovation/" class="link_confirm">
+      <img src="{% static 'blog/img/sw.png' %}" alt="swリフォーム" class="bd-placeholder-img card-img-top" width="100%" height="180" 
+      xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"focusable="false" role="img" aria-label="Placeholder: Image cap">
+      <rect width="100%" height="100%" fill="#868e96"/></svg>
+      <div class="card-body">
+      <p class="card-text">SWリフォーム</p>
+      </div></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
